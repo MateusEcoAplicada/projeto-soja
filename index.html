@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSoja Brasil - Economia, Sociedade e Meio Ambiente | Projeto UNESP & YEB</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="logo" onclick="navigate('home')">
+            <span class="logo-leaf">🌱</span> 
+            <span>EcoSoja <span class="highlight">Brasil</span></span>
+            <span class="logo-sub">UNESP & YEB</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="navigate('home')" class="active" id="nav-home">Início</a></li>
+            <li><a href="#page-campo-a-mesa" data-page-link="campo-a-mesa" id="nav-campo-a-mesa">Do campo à mesa</a></li>
+            <li><a href="#" onclick="navigate('mercado')" id="nav-mercado">Mercado da Soja</a></li>
+            <li><a href="#" onclick="navigate('cadeia')" id="nav-cadeia">Cadeia Produtiva</a></li>
+            <li><a href="#" onclick="navigate('custos')" id="nav-custos">Custos & Regiões</a></li>
+            <li><a href="#" onclick="navigate('tecnologia')" id="nav-tecnologia">Tecnologia</a></li>
+            <li><a href="#" onclick="navigate('sustentabilidade')" id="nav-sustentabilidade">Meio Ambiente & ODS</a></li>
+            <li><a href="#" onclick="navigate('quiz')" id="nav-quiz" class="nav-quiz-link">🎯 Quiz</a></li>
+            <li><a href="#" onclick="navigate('referencias')" id="nav-referencias">📚 Referências</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container Principal das Páginas -->
+    <main id="app-container">
+        
+        <!-- PÁGINA 1: INÍCIO -->
+        <section id="page-home" class="page active">
+            <header class="hero">
+                <div class="hero-content">
+                    <span class="hero-badge">Projeto de Extensão Universitária • UNESP & YEB</span>
+                    <h1 class="hero-title">O que acontece com a economia, com a sociedade e com o meio ambiente quando o Brasil produz mais soja?</h1>
+                    <p class="hero-subtitle">Explore uma plataforma interativa de educação econômica e ambiental: da cotação internacional em Chicago aos custos na fazenda, da preservação dos biomas e metas dos ODS até a mesa do consumidor global.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="navigate('sustentabilidade')">🌍 Soja, Meio Ambiente & ODS</button>
+                        <button class="btn-secondary" onclick="navigate('mercado')">📈 Mercado & Preços</button>
+                        <button class="btn-quiz" onclick="navigate('quiz')">🎯 Teste no Quiz</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tríade: Economia, Sociedade e Meio Ambiente -->
+            <div class="container pillars-section">
+                <div class="pillars-grid">
+                    <div class="pillar-card pillar-econ">
+                        <div class="pillar-icon">💰</div>
+                        <h3>Economia</h3>
+                        <p>Principal geradora de divisas da balança comercial brasileira, movimentando tradings globais, indústrias de esmagamento e a cotação na Bolsa de Chicago (<abbr class="glossary-tooltip" tabindex="0" title="Chicago Board of Trade, mercado de contratos futuros de commodities que integra o CME Group.">CBOT</abbr>).</p>
+                    </div>
+                    <div class="pillar-card pillar-soc">
+                        <div class="pillar-icon">👥</div>
+                        <h3>Sociedade</h3>
+                        <p>Dinamização de polos do interior, geração de milhões de empregos rurais e urbanos, cooperativismo forte e base da segurança alimentar como farelo para proteína animal.</p>
+                    </div>
+                    <div class="pillar-card pillar-env">
+                        <div class="pillar-icon">🌿</div>
+                        <h3>Meio Ambiente & ODS</h3>
+                        <p>O desafio da produção sustentável: Plantio Direto, fixação biológica de nitrogênio, transição energética via biocombustíveis e compromissos com a Agenda 2030 da ONU.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <h2 style="text-align: center; margin-top: 1rem; margin-bottom: 0.5rem;">Explore os Módulos da Plataforma</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Navegue pelos temas desenvolvidos pela nossa equipe de pesquisa:</p>
+            </div>
+
+            <div class="home-features">
+                <div class="feature-card" onclick="navigate('mercado')">
+                    <div class="icon">📈</div>
+                    <h3>Mercado e Preço</h3>
+                    <p>Acompanhe a evolução histórica e os fatores determinantes que movem os preços na CBOT.</p>
+                </div>
+                <div class="feature-card" data-page-link="campo-a-mesa" role="link" tabindex="0">
+                    <div class="icon">🌱</div>
+                    <h3>Do campo à mesa</h3>
+                    <p>Conheça o ciclo da soja, da preparação do solo aos alimentos, à ração e ao biodiesel.</p>
+                </div>
+                <div class="feature-card" onclick="navigate('cadeia')">
+                    <div class="icon">🚜</div>
+                    <h3>Cadeia Produtiva</h3>
+                    <p>Dos insumos à exportação, compreenda quem participa, a logística e os compradores.</p>
+                </div>
+                <div class="feature-card" onclick="navigate('custos')">
+                    <div class="icon">💵</div>
+                    <h3>Custos & Regiões</h3>
+                    <p>Regionalização da produção e simulador de custos por hectare nos principais estados.</p>
+                </div>
+                <div class="feature-card" onclick="navigate('tecnologia')">
+                    <div class="icon">🛰️</div>
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Agricultura de precisão versus tecnologias de baixo custo para pequenos produtores.</p>
+                </div>
+                <div class="feature-card" onclick="navigate('sustentabilidade')">
+                    <div class="icon">🌍</div>
+                    <h3>Meio Ambiente & ODS</h3>
+                    <p>Práticas regenerativas, Código Florestal, biocombustíveis e a Agenda 2030 da ONU.</p>
+                </div>
+                <div class="feature-card feature-quiz" onclick="navigate('quiz')">
+                    <div class="icon">🎯</div>
+                    <h3>Quiz Educativo</h3>
+                    <p>Teste seus conhecimentos com perguntas dinâmicas e explicações em tempo real.</p>
+                </div>
+            </div>
+            
+            <div class="container mt-4">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Nossa Equipe de Pesquisa</h2>
+                <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; text-align: left;">
+                    <div class="card">
+                        <h4 class="highlight">Mateus Oliveira</h4>
+                        <p class="nota mt-2">Desenvolvimento e estruturação da plataforma digital.</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Gabriel</h4>
+                        <p class="nota mt-2">Pesquisa sobre regionalização da soja.</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Maria Luisa</h4>
+                        <p class="nota mt-2">Pesquisa sobre custos produtivos.</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Fabio e Rafael</h4>
+                        <p class="nota mt-2">Pesquisa de outros países exportadores de soja e temas variados.</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Kayke</h4>
+                        <p class="nota mt-2">Tecnologia, sustentabilidade, ESG e Nova Economia Verde (rastreabilidade, crédito de carbono e biocombustíveis).</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Yasmin</h4>
+                        <p class="nota mt-2">Importação, crédito, geopolítica, logística e infraestrutura (gargalos de transporte e armazenagem).</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Fernando e Caio</h4>
+                        <p class="nota mt-2">Indicadores de produtividade, rentabilidade, sazonalidade e dinâmica de preços (Bolsa de Chicago e <abbr class="glossary-tooltip" tabindex="0" title="Estratégia que pode reduzir uma exposição a preço ou câmbio, sem eliminar todos os riscos.">hedge</abbr> financeiro).</p>
+                    </div>
+                    <div class="card">
+                        <h4 class="highlight">Lucas</h4>
+                        <p class="nota mt-2">Demanda externa/interna e o Complexo Soja (processamento industrial, farelo e óleo).</p>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>Projeto de Extensão - UNESP & YEB | Plataforma Educacional sobre a Soja</p>
+            </footer>
+        </section>
+
+        <!-- MÓDULO: DO CAMPO À MESA -->
+        <section id="page-campo-a-mesa" class="page hidden" aria-labelledby="cycle-title">
+            <div class="container cycle-container">
+                <header class="cycle-header">
+                    <p class="cycle-eyebrow">A jornada de uma safra</p>
+                    <h2 id="cycle-title">Do campo à mesa: o ciclo da soja</h2>
+                    <p class="subtitle">Acompanhe como decisões no campo se conectam ao alimento, à energia, à economia e ao ambiente.</p>
+                </header>
+
+                <fieldset class="season-selector">
+                    <legend>Escolha o sistema de cultivo</legend>
+                    <label class="season-option">
+                        <input type="radio" name="season-mode" value="verao" checked>
+                        <span>Soja de verão</span>
+                    </label>
+                    <label class="season-option">
+                        <input type="radio" name="season-mode" value="sucessao">
+                        <span>Soja seguida de milho safrinha</span>
+                    </label>
+                </fieldset>
+                <p class="season-context" id="season-context" aria-live="polite"></p>
+
+                <p class="cycle-note">Durações aproximadas e ilustrativas: variam conforme região, cultivar, clima, calendário agrícola e manejo. Para planejamento real, consulte recomendações locais da Embrapa e o zoneamento agrícola vigente.</p>
+
+                <div class="cycle-scroll" tabindex="0" aria-label="Linha do tempo: nove etapas do ciclo da soja">
+                    <ol class="cycle-timeline" id="cycle-timeline"></ol>
+                </div>
+                <p class="cycle-scroll-hint">As etapas seguem da esquerda para a direita.</p>
+            </div>
+        </section>
+
+        <!-- PÁGINA 2: MERCADO DA SOJA -->
+        <section id="page-mercado" class="page hidden">
+            <div class="container">
+                <h2>1. Mercado da Soja</h2>
+                <p class="subtitle">A soja é uma commodity global. Seu preço é influenciado por diversos fatores internacionais, principalmente na <strong><abbr class="glossary-tooltip" tabindex="0" title="Chicago Board of Trade, mercado de contratos futuros de commodities que integra o CME Group.">CBOT</abbr> (Chicago Board of Trade)</strong>.</p>
+                
+                <div class="card chart-container">
+                    <h3>Evolução do Preço da Soja (US$/<abbr class="glossary-tooltip" tabindex="0" title="Unidade de quantidade usada em cotações de grãos; a conversão em massa é aproximada e segue a convenção do produto.">bushel</abbr>)</h3>
+                    <div class="chart-filters">
+                        <button class="filter-btn active" id="btn-1y" onclick="updateChart('1y')">1 ano</button>
+                        <button class="filter-btn" id="btn-5y" onclick="updateChart('5y')">5 anos</button>
+                        <button class="filter-btn" id="btn-10y" onclick="updateChart('10y')">10 anos</button>
+                        <button class="filter-btn" id="btn-all" onclick="updateChart('all')">Completo</button>
+                    </div>
+                    <div style="position: relative; height:400px; width:100%">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="determinantes-section">
+                    <h3>Por que o preço muda?</h3>
+                    <div class="determinantes-grid">
+                        <div class="det-card">
+                            <span class="icon">☁️</span>
+                            <h4>Clima</h4>
+                            <p>Eventos climáticos que afetam as principais regiões produtoras podem alterar as expectativas de oferta e provocar movimentos nos preços.</p>
+                        </div>
+                        <div class="det-card">
+                            <span class="icon">🇺🇸</span>
+                            <h4>Produção EUA</h4>
+                            <p>Os EUA são grandes produtores. O tamanho da sua safra e ritmo de plantio/colheita afetam os preços.</p>
+                        </div>
+                        <div class="det-card">
+                            <span class="icon">🇧🇷</span>
+                            <h4>Produção Brasileira</h4>
+                            <p>Sendo o maior produtor e exportador, qualquer quebra de safra no Brasil eleva a cotação global.</p>
+                        </div>
+                        <div class="det-card">
+                            <span class="icon">🇨🇳</span>
+                            <h4>Demanda Chinesa</h4>
+                            <p>A China é o maior comprador. A demanda deles (ex: por ração para suínos) dita o ritmo de exportação.</p>
+                        </div>
+                        <div class="det-card">
+                            <span class="icon">💵</span>
+                            <h4>Câmbio</h4>
+                            <p>A variação do Dólar em relação ao Real afeta a rentabilidade do produtor brasileiro e a competitividade.</p>
+                        </div>
+                        <div class="det-card">
+                            <span class="icon">📦</span>
+                            <h4>Estoques Mundiais</h4>
+                            <p>A relação entre o que se tem estocado e o que se consome (estoque/uso) é vital para precificação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="market-game card mt-4" aria-labelledby="market-game-title">
+                    <div class="market-game-heading">
+                        <div>
+                            <p class="cycle-eyebrow">Jogo do preço da soja</p>
+                            <h3 id="market-game-title">O que pode pressionar o preço?</h3>
+                            <p>Ative cenários e observe uma tendência qualitativa, não uma previsão de cotação.</p>
+                        </div>
+                        <span class="market-game-icon" aria-hidden="true">📈</span>
+                    </div>
+                    <fieldset class="market-factor-list">
+                        <legend>Quais cenários acontecem ao mesmo tempo?</legend>
+                        <label class="market-factor-option">
+                            <input type="checkbox" data-market-factor="climate">
+                            <span><strong>Quebra de safra por clima</strong><small>Menor oferta pode pressionar a referência internacional para cima.</small></span>
+                        </label>
+                        <label class="market-factor-option">
+                            <input type="checkbox" data-market-factor="demand">
+                            <span><strong>Aumento da demanda chinesa</strong><small>Mais compradores disputando a oferta podem pressionar a referência para cima.</small></span>
+                        </label>
+                        <label class="market-factor-option">
+                            <input type="checkbox" data-market-factor="exchange">
+                            <span><strong>Dólar sobe 10% frente ao real</strong><small>Pode elevar a receita em reais do exportador; sozinho, não altera diretamente a cotação em dólares da CBOT.</small></span>
+                        </label>
+                    </fieldset>
+                    <div class="market-game-result" id="market-game-result" role="status" aria-live="polite">
+                        Ative um ou mais cenários para comparar os possíveis efeitos sobre preço internacional e valor em reais.
+                    </div>
+                    <p class="nota">Exercício simplificado: o efeito real depende da intensidade, duração e combinação de fatores, além de estoques, custos e políticas comerciais.</p>
+                </section>
+
+                <div class="card map-section mt-4">
+                    <h3>Principais Mercados e Fluxos (2024)</h3>
+                    <p>O fluxo da soja ocorre majoritariamente das Américas para a Ásia e Europa.</p>
+                    <div class="world-map-visual">
+                        <div class="flow-box origin">
+                            <h4>Origem (Produtores)</h4>
+                            <ul>
+                                <li>🇧🇷 Brasil (Maior)</li>
+                                <li>🇺🇸 Estados Unidos</li>
+                                <li>🇦🇷 Argentina</li>
+                            </ul>
+                        </div>
+                        <div class="flow-arrow-big">➔</div>
+                        <div class="flow-box destination">
+                            <h4>Destino (Compradores)</h4>
+                            <ul>
+                                <li>🇨🇳 China (Líder Absoluto)</li>
+                                <li>🇪🇺 União Europeia</li>
+                                <li>🌎 Outros Mercados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 3: CADEIA PRODUTIVA -->
+        <section id="page-cadeia" class="page hidden">
+            <div class="container">
+                <h2>2. Cadeia Produtiva</h2>
+                <p class="subtitle">Quem participa do mercado da soja?</p>
+
+                <section class="chain-module card" id="chain-module" aria-labelledby="chain-explorer-title">
+                    <div class="chain-module-heading">
+                        <div>
+                            <h3 id="chain-explorer-title">Explore os elos da cadeia</h3>
+                            <p>Selecione um elo para conhecer participantes, valor gerado, riscos e um dado de referência.</p>
+                        </div>
+                        <button class="btn-outline chain-animation-button" type="button" data-chain-animation aria-pressed="false">
+                            <span aria-hidden="true">▶</span> Animar fluxo do grão
+                        </button>
+                    </div>
+
+                    <div class="chain-workspace">
+                        <div class="chain-diagram" id="chain-diagram" role="group" aria-label="Diagrama interativo da cadeia da soja">
+                            <ol class="chain-path">
+                                <li class="chain-node-wrap">
+                                    <button class="chain-node is-selected" type="button" data-chain-link="insumos" aria-pressed="true">
+                                        <span class="chain-node-icon" aria-hidden="true">🧪</span>
+                                        <span>Insumos</span>
+                                    </button>
+                                </li>
+                                <li class="chain-node-wrap">
+                                    <button class="chain-node" type="button" data-chain-link="produtor" aria-pressed="false">
+                                        <span class="chain-node-icon" aria-hidden="true">🌱</span>
+                                        <span>Produtor</span>
+                                    </button>
+                                </li>
+                                <li class="chain-node-wrap">
+                                    <button class="chain-node" type="button" data-chain-link="logistica" aria-pressed="false">
+                                        <span class="chain-node-icon" aria-hidden="true">🚛</span>
+                                        <span>Logística</span>
+                                    </button>
+                                </li>
+                                <li class="chain-node-wrap">
+                                    <button class="chain-node" type="button" data-chain-link="trading" aria-pressed="false">
+                                        <span class="chain-node-icon" aria-hidden="true">📊</span>
+                                        <span>Tradings</span>
+                                    </button>
+                                </li>
+                            </ol>
+
+                            <div class="chain-branches">
+                                <p>A partir daqui, o grão pode seguir por caminhos diferentes:</p>
+                                <div class="chain-branch-options">
+                                    <button class="chain-node chain-node--export" type="button" data-chain-link="exportacao" aria-pressed="false">
+                                        <span class="chain-node-icon" aria-hidden="true">🚢</span>
+                                        <span>Exportação do grão</span>
+                                    </button>
+                                    <button class="chain-node chain-node--industry" type="button" data-chain-link="industria" aria-pressed="false">
+                                        <span class="chain-node-icon" aria-hidden="true">⚙️</span>
+                                        <span>Indústria de esmagamento</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="chain-detail-panel" aria-labelledby="chain-detail-title" aria-live="polite" aria-atomic="true">
+                            <p class="chain-detail-kicker">Elo selecionado</p>
+                            <h4 id="chain-detail-title">Fornecedores de insumos</h4>
+                            <dl>
+                                <div><dt>Quem participa</dt><dd id="chain-participants"></dd></div>
+                                <div><dt>O que agrega valor</dt><dd id="chain-value"></dd></div>
+                                <div><dt>Riscos e desafios</dt><dd id="chain-risks"></dd></div>
+                            </dl>
+                            <p class="chain-fact" id="chain-fact"></p>
+                        </aside>
+                    </div>
+                    <p class="chain-flow-status" id="chain-flow-status" role="status" aria-live="polite">Fluxo do grão pausado.</p>
+
+                    <div class="ton-mode-toggle">
+                        <div>
+                            <h4>Para onde vai 1 tonelada de soja?</h4>
+                            <p>Explore como a destinação do grão muda a quantidade de cada produto.</p>
+                        </div>
+                        <button class="btn-primary" type="button" data-ton-mode-toggle aria-expanded="false" aria-controls="one-ton-mode">Explorar 1 tonelada</button>
+                    </div>
+
+                    <div class="one-ton-mode" id="one-ton-mode" hidden>
+                        <p class="ton-disclaimer">Simulação didática, não representa a distribuição anual do Brasil. Os valores iniciais (55% de exportação e 35% do óleo destinado ao biodiesel) são premissas ajustáveis, não dados nacionais. Os rendimentos do esmagamento são aproximados e variam conforme o grão e o processo industrial.</p>
+                        <div class="ton-controls">
+                            <label for="export-share">Parte do grão exportada sem esmagamento <output id="export-share-value" for="export-share">55%</output></label>
+                            <input id="export-share" type="range" min="0" max="100" step="5" value="55">
+                            <label for="biodiesel-share">Parte do óleo destinada à produção de biodiesel <output id="biodiesel-share-value" for="biodiesel-share">35%</output></label>
+                            <input id="biodiesel-share" type="range" min="0" max="100" step="5" value="35">
+                        </div>
+                        <p class="ton-crushed-summary" id="ton-crushed-summary"></p>
+                        <div class="ton-graph-wrap">
+                            <p class="ton-graph-title">Destino inicial do grão</p>
+                            <div class="ton-graph ton-routing-graph" id="ton-routing-graph" role="img" aria-label="Divisão entre exportação in natura e esmagamento">
+                                <span class="ton-segment ton-segment--export" data-routing-segment="export"></span>
+                                <span class="ton-segment ton-segment--crushing" data-routing-segment="crushing"></span>
+                            </div>
+                            <ul class="ton-legend ton-legend--routing">
+                                <li><span class="ton-legend-swatch ton-legend-swatch--export"></span>Exportação in natura <strong id="routing-export-kg"></strong></li>
+                                <li><span class="ton-legend-swatch ton-legend-swatch--crushing"></span>Segue para esmagamento <strong id="routing-crushing-kg"></strong></li>
+                            </ul>
+                        </div>
+                        <div class="ton-graph-wrap">
+                            <p class="ton-graph-title">Produtos resultantes de 1.000 kg de grãos</p>
+                            <div class="ton-graph" id="ton-graph" role="img" aria-label="Gráfico de distribuição ilustrativa de uma tonelada de soja">
+                                <span class="ton-segment ton-segment--export" data-ton-segment="export"></span>
+                                <span class="ton-segment ton-segment--oil" data-ton-segment="oil"></span>
+                                <span class="ton-segment ton-segment--meal" data-ton-segment="meal"></span>
+                                <span class="ton-segment ton-segment--other" data-ton-segment="other"></span>
+                            </div>
+                            <ul class="ton-legend">
+                                <li><span class="ton-legend-swatch ton-legend-swatch--export"></span>Exportação in natura <strong id="ton-export-kg"></strong></li>
+                                <li><span class="ton-legend-swatch ton-legend-swatch--oil"></span>Óleo <strong id="ton-oil-kg"></strong></li>
+                                <li><span class="ton-legend-swatch ton-legend-swatch--meal"></span>Farelo <strong id="ton-meal-kg"></strong></li>
+                                <li><span class="ton-legend-swatch ton-legend-swatch--other"></span>Casca, umidade e outros <strong id="ton-other-kg"></strong></li>
+                            </ul>
+                        </div>
+                        <div class="ton-graph-wrap">
+                            <p class="ton-graph-title">Usos possíveis do óleo (fração dos usos simulados)</p>
+                            <div class="ton-graph ton-oil-uses-graph" id="ton-oil-uses-graph" role="img" aria-label="Divisão ilustrativa dos usos do óleo entre biodiesel e outros usos">
+                                <span class="ton-segment ton-segment--biodiesel" data-oil-use-segment="biodiesel"></span>
+                                <span class="ton-segment ton-segment--oil-other" data-oil-use-segment="other"></span>
+                            </div>
+                            <ul class="ton-legend ton-legend--routing">
+                                <li><span class="ton-legend-swatch ton-legend-swatch--biodiesel"></span>Óleo destinado ao biodiesel <strong id="oil-biodiesel-kg"></strong></li>
+                                <li><span class="ton-legend-swatch ton-legend-swatch--oil-other"></span>Óleo para outros usos <strong id="oil-other-kg"></strong></li>
+                            </ul>
+                        </div>
+                        <p class="ton-biodiesel-note" id="ton-biodiesel-note"></p>
+                        <p class="nota">Rendimento industrial apenas ilustrativo (18% óleo, 79% farelo e 3% outras frações). Conferir com dados atuais da ABIOVE ou Embrapa antes de publicar.</p>
+                    </div>
+                </section>
+
+                <div class="insumos-section mt-4">
+                    <h3>Insumos da Produção</h3>
+                    <p>Abaixo os principais insumos que compõem a base da produção. <strong>Clique nos cards</strong> para ver detalhes:</p>
+                    <div class="insumos-cards">
+                        <details class="insumo-card">
+                            <summary><h4>🌱 Sementes</h4></summary>
+                            <div class="insumo-detail">
+                                <p><strong>Exemplos:</strong> Sementes de soja, cultivares transgênicas (resistentes a herbicidas ou insetos).</p>
+                            </div>
+                        </details>
+                        <details class="insumo-card">
+                            <summary><h4>🧪 Fertilizantes</h4></summary>
+                            <div class="insumo-detail">
+                                <p><strong>Exemplos:</strong> Formulações NPK (Nitrogênio, Fósforo, Potássio), calcário para correção de solo.</p>
+                            </div>
+                        </details>
+                        <details class="insumo-card">
+                            <summary><h4>🛡️ Defensivos</h4></summary>
+                            <div class="insumo-detail">
+                                <p><strong>Exemplos:</strong> Herbicidas (plantas daninhas), fungicidas (doenças como ferrugem) e inseticidas.</p>
+                            </div>
+                        </details>
+                        <details class="insumo-card">
+                            <summary><h4>🚜 Máquinas</h4></summary>
+                            <div class="insumo-detail">
+                                <p><strong>Exemplos:</strong> Tratores, plantadeiras, pulverizadores, colheitadeiras e combustível (diesel).</p>
+                            </div>
+                        </details>
+                        <details class="insumo-card">
+                            <summary><h4>💻 Tecnologia</h4></summary>
+                            <div class="insumo-detail">
+                                <p><strong>Exemplos:</strong> Sensores, softwares de gestão, drones, estações meteorológicas.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="compradores-section mt-4 card">
+                    <h3>Principais Compradores (Destino da Soja)</h3>
+                    <div class="compradores-grid">
+                        <div class="comp-col">
+                            <h4>Compradores Externos</h4>
+                            <ul>
+                                <li>🇨🇳 China</li>
+                                <li>🇪🇺 União Europeia</li>
+                                <li>🌎 Outros mercados asiáticos e europeus</li>
+                            </ul>
+                        </div>
+                        <div class="comp-col">
+                            <h4>Compradores Internos</h4>
+                            <ul>
+                                <li>🏭 Esmagadoras de soja</li>
+                                <li>🐄 Indústria de ração (suínos, aves, bovinos)</li>
+                                <li>🍳 Indústria de óleo refinado e biodiesel</li>
+                                <li>🚢 Tradings/Exportadores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PÁGINA 4: CUSTOS DE PRODUÇÃO E REGIONALIZAÇÃO -->
+        <section id="page-custos" class="page hidden">
+            <div class="container">
+                <h2>3. Regionalização e Custos de Produção</h2>
+                <p class="subtitle">Como a produção está distribuída no Brasil e quanto custa produzir?</p>
+
+                <div class="card mb-4" style="margin-bottom: 2rem;">
+                    <h3>Regionalização da Soja no Brasil</h3>
+                    <p class="nota">Pesquisa e texto por: Gabriel</p>
+                    <p class="mt-2">O Brasil é o maior produtor mundial de soja, com a produção concentrada principalmente nas regiões Centro-Oeste, Sul e MATOPIBA. A infraestrutura logística inclui rodovias, ferrovias e portos estratégicos que escoam a produção para mercados internacionais.</p>
+                    
+                    <div class="regionalizacao-grid mt-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="reg-card" style="background: var(--light-green); padding: 1rem; border-radius: 8px;">
+                            <h4 class="highlight">📍 Mato Grosso</h4>
+                            <p>Líder nacional na produção de soja, responsável por cerca de 28% da safra brasileira. Principais polos: Sorriso, Lucas do Rio Verde e Sinop.</p>
+                        </div>
+                        <div class="reg-card" style="background: var(--light-green); padding: 1rem; border-radius: 8px;">
+                            <h4 class="highlight">📍 MATOPIBA</h4>
+                            <p>Fronteira agrícola em expansão que abrange Maranhão, Tocantins, Piauí e Bahia. Região com alto potencial de crescimento e investimentos em infraestrutura.</p>
+                        </div>
+                        <div class="reg-card" style="background: var(--light-green); padding: 1rem; border-radius: 8px;">
+                            <h4 class="highlight">📍 Região Sul</h4>
+                            <p>Paraná e Rio Grande do Sul são tradicionais produtores com alta produtividade. Infraestrutura consolidada com acesso aos portos de Paranaguá e Rio Grande.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regional-layout">
+                    <section class="card map-interactive" aria-labelledby="regional-map-title">
+                        <h3 id="regional-map-title">Mapa regional: custos e produtividade</h3>
+                        <p>Selecione uma região no mapa. As cores mostram o valor relativo entre as seis regiões do exemplo.</p>
+                        <fieldset class="map-mode-control">
+                            <legend>Colorir o mapa por</legend>
+                            <label><input type="radio" name="map-mode" value="produtividade" checked> Produtividade</label>
+                            <label><input type="radio" name="map-mode" value="custo"> Custo por hectare</label>
+                        </fieldset>
+                        <div class="brasil-map-wrap">
+                            <svg class="brasil-map-svg" viewBox="0 0 460 460" role="group" aria-labelledby="brasil-map-title brasil-map-description">
+                                <title id="brasil-map-title">Mapa do Brasil com contornos estaduais e regiões produtoras selecionáveis</title>
+                                <desc id="brasil-map-description">Contornos simplificados das 27 unidades federativas. Selecione MT, GO, MS, PR, RS ou MATOPIBA, formada por partes de MA, TO, PI e BA.</desc>
+                                <path class="brazil-state" data-state="AC" d="" />
+                                <path class="brazil-state" data-state="AL" d="" />
+                                <path class="brazil-state" data-state="AM" d="" />
+                                <path class="brazil-state" data-state="AP" d="" />
+                                <g class="map-region map-region--matopiba" data-region="ba" role="button" tabindex="0" aria-label="MATOPIBA: áreas produtoras em partes do Maranhão, Tocantins, Piauí e Bahia">
+                                    <path class="brazil-state" data-state="BA" d="" />
+                                    <path class="brazil-state" data-state="MA" d="" />
+                                    <path class="brazil-state" data-state="PI" d="" />
+                                    <path class="brazil-state" data-state="TO" d="" />
+                                    <text x="345" y="225">MATOPIBA</text>
+                                </g>
+                                <path class="brazil-state" data-state="CE" d="" />
+                                <path class="brazil-state" data-state="DF" d="" />
+                                <path class="brazil-state" data-state="ES" d="" />
+                                <g class="map-region" data-region="go" role="button" tabindex="0" aria-label="Goiás: custo e produtividade ilustrativos">
+                                    <path class="brazil-state" data-state="GO" d="" /><text x="267" y="248">GO</text>
+                                </g>
+                                <path class="brazil-state" data-state="MG" d="" />
+                                <g class="map-region" data-region="ms" role="button" tabindex="0" aria-label="Mato Grosso do Sul: custo e produtividade ilustrativos">
+                                    <path class="brazil-state" data-state="MS" d="" /><text x="216" y="298">MS</text>
+                                </g>
+                                <g class="map-region" data-region="mt" role="button" tabindex="0" aria-label="Mato Grosso: custo e produtividade ilustrativos">
+                                    <path class="brazil-state" data-state="MT" d="" /><text x="202" y="214">MT</text>
+                                </g>
+                                <path class="brazil-state" data-state="PA" d="" />
+                                <path class="brazil-state" data-state="PB" d="" />
+                                <path class="brazil-state" data-state="PE" d="" />
+                                <g class="map-region" data-region="pr" role="button" tabindex="0" aria-label="Paraná: custo e produtividade ilustrativos">
+                                    <path class="brazil-state" data-state="PR" d="" /><text x="249" y="340">PR</text>
+                                </g>
+                                <path class="brazil-state" data-state="RJ" d="" />
+                                <path class="brazil-state" data-state="RN" d="" />
+                                <path class="brazil-state" data-state="RO" d="" />
+                                <path class="brazil-state" data-state="RR" d="" />
+                                <g class="map-region" data-region="rs" role="button" tabindex="0" aria-label="Rio Grande do Sul: custo e produtividade ilustrativos">
+                                    <path class="brazil-state" data-state="RS" d="" /><text x="225" y="402">RS</text>
+                                </g>
+                                <path class="brazil-state" data-state="SC" d="" />
+                                <path class="brazil-state" data-state="SE" d="" />
+                                <path class="brazil-state" data-state="SP" d="" />
+                            </svg>
+                            <div class="map-heat-legend" aria-label="Legenda do mapa de calor">
+                                <span>Menor valor</span><span class="heat-gradient" aria-hidden="true"></span><span>Maior valor</span>
+                            </div>
+                            <p class="map-source-note">Contornos estaduais simplificados de click_that_hood (licença MIT). O destaque MATOPIBA representa estados participantes, não uma delimitação oficial da área agrícola.</p>
+                        </div>
+                        <div id="custo-info" class="custo-info-box mt-3" aria-live="polite">
+                            <h4 id="estado-nome">Selecione uma região no mapa</h4>
+                            <ul class="custos-lista">
+                                <li><strong>Custo total:</strong> <span id="val-custo-total">--</span></li>
+                                <li><strong>Produtividade:</strong> <span id="val-prod">--</span></li>
+                                <li><strong>Custo por saca:</strong> <span id="val-custo-saca">--</span></li>
+                                <li><strong>Preço de referência:</strong> <span id="val-preco">--</span></li>
+                                <li><strong>Diferença por saca:</strong> <span id="val-margem" class="highlight">--</span></li>
+                            </ul>
+                            <p class="nota">Valores ilustrativos para comparação didática, não são cotação nem orçamento de safra.</p>
+                        </div>
+                    </section>
+
+                    <section class="card region-comparison" aria-labelledby="region-comparison-title">
+                        <h3 id="region-comparison-title">Compare duas regiões</h3>
+                        <p>Os números são exemplos ilustrativos; custos e produtividade mudam por safra, propriedade e fonte.</p>
+                        <div class="comparison-selectors">
+                            <label for="region-compare-a">Região A
+                                <select id="region-compare-a">
+                                    <option value="mt">Mato Grosso (MT)</option><option value="pr">Paraná (PR)</option><option value="go">Goiás (GO)</option><option value="rs">Rio Grande do Sul (RS)</option><option value="ms">Mato Grosso do Sul (MS)</option><option value="ba">Bahia / MATOPIBA</option>
+                                </select>
+                            </label>
+                            <label for="region-compare-b">Região B
+                                <select id="region-compare-b">
+                                    <option value="pr" selected>Paraná (PR)</option><option value="mt">Mato Grosso (MT)</option><option value="go">Goiás (GO)</option><option value="rs">Rio Grande do Sul (RS)</option><option value="ms">Mato Grosso do Sul (MS)</option><option value="ba">Bahia / MATOPIBA</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="comparison-results" id="region-comparison-results" aria-live="polite"></div>
+                    </section>
+                </div>
+
+                <section class="farm-simulator card mt-4" aria-labelledby="farm-simulator-title">
+                    <div class="simulator-heading">
+                        <div>
+                            <p class="cycle-eyebrow">Simulador ilustrativo</p>
+                            <h3 id="farm-simulator-title">Teste a rentabilidade da lavoura</h3>
+                            <p>Ajuste os controles. O modelo considera um custo-base de outros itens e usa o câmbio como aproximação do custo de fertilizantes.</p>
+                        </div>
+                    </div>
+                    <div class="farm-simulator-layout">
+                        <div class="simulator-controls">
+                            <label class="sim-control" for="farm-yield">
+                                <span>Produtividade <output id="farm-yield-value" for="farm-yield">60 sc/ha</output></span>
+                                <input id="farm-yield" type="range" min="20" max="100" step="1" value="60">
+                            </label>
+                            <label class="sim-control" for="farm-price">
+                                <span>Preço da <abbr class="glossary-tooltip" tabindex="0" title="Unidade comercial brasileira normalmente equivalente a 60 kg de soja.">saca</abbr> <output id="farm-price-value" for="farm-price">R$ 125,00</output></span>
+                                <input id="farm-price" type="range" min="80" max="220" step="1" value="125">
+                            </label>
+                            <label class="sim-control" for="farm-exchange">
+                                <span>Câmbio de referência <output id="farm-exchange-value" for="farm-exchange">R$ 5,50/US$</output></span>
+                                <input id="farm-exchange" type="range" min="3.5" max="8" step="0.1" value="5.5">
+                            </label>
+                            <label class="sim-control" for="farm-fertilizer">
+                                <span>Custo-base de fertilizantes <output id="farm-fertilizer-value" for="farm-fertilizer">R$ 2.200/ha</output></span>
+                                <input id="farm-fertilizer" type="range" min="800" max="5000" step="100" value="2200">
+                            </label>
+                            <label class="sim-control" for="farm-area">
+                                <span>Área cultivada <output id="farm-area-value" for="farm-area">100 ha</output></span>
+                                <input id="farm-area" type="range" min="1" max="5000" step="1" value="100">
+                            </label>
+                            <p class="nota">Premissas do exemplo: R$ 4.600/ha de outros custos e fertilizantes ajustados proporcionalmente ao câmbio. Uma lavoura real tem custos e exposição cambial diferentes.</p>
+                        </div>
+                        <div class="simulator-results">
+                            <div class="simulator-kpis">
+                                <div><span>Custo por saca</span><strong id="sim-cost-per-bag">--</strong></div>
+                                <div><span>Ponto de equilíbrio</span><strong id="sim-break-even">--</strong></div>
+                                <div><span>Margem estimada</span><strong id="sim-margin-per-ha">--</strong></div>
+                                <div><span>Resultado na área</span><strong id="sim-total-result">--</strong></div>
+                            </div>
+                            <div class="profit-graph" id="profit-graph" role="img" aria-label="Gráfico de receita e custos por hectare">
+                                <p class="profit-graph-title">Receita e custos estimados por hectare</p>
+                                <div class="profit-bar-row"><span>Receita</span><div class="profit-bar-track"><div class="profit-bar profit-bar--revenue" data-profit-bar="revenue"></div></div><strong id="sim-revenue-value"></strong></div>
+                                <div class="profit-bar-row"><span>Custos</span><div class="profit-bar-track"><div class="profit-bar profit-bar--cost" data-profit-bar="cost"></div></div><strong id="sim-cost-value"></strong></div>
+                                <div class="profit-bar-row"><span>Margem</span><div class="profit-bar-track"><div class="profit-bar profit-bar--margin" data-profit-bar="margin"></div></div><strong id="sim-margin-value"></strong></div>
+                            </div>
+                            <p class="exchange-scenario" id="exchange-scenario" role="status" aria-live="polite"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="cost-composition card mt-4" aria-labelledby="cost-composition-title">
+                    <div>
+                        <h3 id="cost-composition-title">Como os custos se dividem?</h3>
+                        <p>A composição muda conforme os custos de fertilizantes e o câmbio selecionados acima.</p>
+                    </div>
+                    <div class="cost-donut-layout">
+                        <div class="cost-donut" id="cost-donut" role="img" aria-label="Gráfico de rosca com a composição ilustrativa dos custos por hectare">
+                            <span id="cost-donut-center">R$ 6.800</span>
+                        </div>
+                        <ul class="cost-donut-legend" id="cost-donut-legend"></ul>
+                    </div>
+                    <p class="nota">Participações de outros custos são premissas didáticas baseadas no exemplo atual. Substitua por orçamento e referências regionais antes de tomar decisões.</p>
+                </section>
+            </div>
+        </section>
+
+        <!-- PÁGINA 5: TECNOLOGIA -->
+        <section id="page-tecnologia" class="page hidden">
+            <div class="container">
+                <h2>4. Tecnologia e Inovação</h2>
+                <p class="subtitle">O que realmente ajuda o produtor no dia a dia?</p>
+
+                <div class="tec-grid">
+                    <div class="card tec-card low-cost">
+                        <div class="tec-header">
+                            <span class="icon">📱</span>
+                            <h3>Tecnologias Acessíveis (Baixo Custo)</h3>
+                            <p>Ideais para pequenos e médios produtores.</p>
+                        </div>
+                        <ul class="tec-list mt-3">
+                            <li>✔️ Aplicativos de monitoramento e previsão meteorológica.</li>
+                            <li>✔️ Plataformas de consulta de preços (Soja, Dólar).</li>
+                            <li>✔️ Mapas de satélite gratuitos (<abbr class="glossary-tooltip" tabindex="0" title="Índice de vegetação usado para observar diferenças de vigor; não mede diretamente a produtividade final.">NDVI</abbr> básico).</li>
+                            <li>✔️ Ferramentas simples de gestão financeira (planilhas/apps).</li>
+                            <li>✔️ Planejamento via grupos de Whatsapp/Telegram técnicos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card tec-card high-cost">
+                        <div class="tec-header">
+                            <span class="icon">🚜</span>
+                            <h3>Tecnologias de Maior Investimento</h3>
+                            <p>Geralmente adotadas por grandes propriedades.</p>
+                        </div>
+                        <ul class="tec-list mt-3">
+                            <li>🚀 Agricultura de Precisão (taxa variável de insumos).</li>
+                            <li>🚀 Piloto Automático e GPS (RTK) em tratores.</li>
+                            <li>🚀 Máquinas e colheitadeiras inteligentes com sensores de produtividade.</li>
+                            <li>🚀 Drones para pulverização localizada e mapeamento 3D.</li>
+                            <li>🚀 Imagens de satélite de alta resolução (diárias).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section class="farm-builder card mt-4" id="farm-builder" aria-labelledby="farm-builder-title">
+                    <div class="farm-builder-heading">
+                        <p class="cycle-eyebrow">Simulador ilustrativo</p>
+                        <h3 id="farm-builder-title">Monte sua fazenda</h3>
+                        <p>Escolha a área, o orçamento e as tecnologias. Compare um investimento inicial hipotético com benefícios anuais estimados.</p>
+                    </div>
+                    <div class="farm-builder-layout">
+                        <div class="farm-builder-controls">
+                            <label class="sim-control" for="farm-builder-size">
+                                <span>Área da propriedade <output id="farm-builder-size-value" for="farm-builder-size">100 ha</output></span>
+                                <input id="farm-builder-size" type="range" min="1" max="3000" step="1" value="100">
+                            </label>
+                            <label class="sim-control" for="farm-builder-budget">
+                                <span>Orçamento disponível <output id="farm-builder-budget-value" for="farm-builder-budget">R$ 50.000</output></span>
+                                <input id="farm-builder-budget" type="range" min="0" max="500000" step="5000" value="50000">
+                            </label>
+                            <fieldset class="farm-tech-options">
+                                <legend>Selecione as tecnologias</legend>
+                                <label class="farm-tech-option">
+                                    <input type="checkbox" data-farm-tech="weather" checked data-cost-fixed="0" data-cost-per-ha="0" data-benefit-per-ha="0">
+                                    <span><strong>App meteorológico</strong><small>Previsão e alertas para apoiar o planejamento.</small><small>Investimento e retorno monetário não contabilizados neste exemplo.</small></span>
+                                </label>
+                                <label class="farm-tech-option">
+                                    <input type="checkbox" data-farm-tech="gps" data-cost-fixed="65000" data-cost-per-ha="35" data-benefit-per-ha="42">
+                                    <span><strong>GPS e piloto automático</strong><small>Hipótese didática: R$ 65 mil + R$ 35/ha; benefício de R$ 42/ha/ano.</small></span>
+                                </label>
+                                <label class="farm-tech-option">
+                                    <input type="checkbox" data-farm-tech="drone" data-cost-fixed="18000" data-cost-per-ha="20" data-benefit-per-ha="30">
+                                    <span><strong>Drone para mapeamento</strong><small>Hipótese didática: R$ 18 mil + R$ 20/ha; benefício de R$ 30/ha/ano.</small></span>
+                                </label>
+                                <label class="farm-tech-option">
+                                    <input type="checkbox" data-farm-tech="precision" data-cost-fixed="85000" data-cost-per-ha="50" data-benefit-per-ha="65">
+                                    <span><strong>Agricultura de precisão</strong><small>Hipótese didática: R$ 85 mil + R$ 50/ha; benefício de R$ 65/ha/ano.</small></span>
+                                </label>
+                            </fieldset>
+                            <p class="nota">Valores fictícios para aprendizagem, sem cotação de fornecedor. Benefícios dependem de cultura, operação, escala e manejo; valide com orçamento local e não os interprete como economia garantida.</p>
+                        </div>
+                        <div class="farm-builder-results" id="farm-builder-results" aria-live="polite" aria-atomic="true">
+                            <h4>Estimativa do cenário</h4>
+                            <dl class="farm-builder-kpis">
+                                <div><dt>Investimento inicial</dt><dd id="farm-builder-investment">--</dd></div>
+                                <div><dt>Benefício anual estimado</dt><dd id="farm-builder-benefit">--</dd></div>
+                                <div><dt>Prazo simples de retorno</dt><dd id="farm-builder-payback">--</dd></div>
+                                <div><dt>Orçamento após investimento</dt><dd id="farm-builder-remaining">--</dd></div>
+                            </dl>
+                            <p class="farm-builder-status" id="farm-builder-status"></p>
+                            <ul class="farm-builder-selection" id="farm-builder-selection"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="card mt-4">
+                    <h3>Análise de Impacto Econômico</h3>
+                    <p>Uma tecnologia ser avançada não significa necessariamente que seja a melhor escolha econômica para *todo* produtor. Avaliamos:</p>
+                    
+                    <div class="table-responsive mt-3">
+                        <div class="tec-table-filters" aria-label="Filtros da tabela de tecnologias">
+                            <label for="tec-filter-text">Buscar
+                                <input id="tec-filter-text" type="search" placeholder="Nome ou descrição">
+                            </label>
+                            <label for="tec-filter-cost">Faixa de custo
+                                <select id="tec-filter-cost"><option value="">Todas</option><option value="low">Baixo</option><option value="medium">Médio</option><option value="high">Alto</option></select>
+                            </label>
+                            <label for="tec-filter-benefit">Benefício esperado
+                                <select id="tec-filter-benefit"><option value="">Todos</option><option value="medium">Médio</option><option value="high">Alto</option></select>
+                            </label>
+                            <label for="tec-filter-access">Acessibilidade
+                                <select id="tec-filter-access"><option value="">Todas</option><option value="high">Alta</option><option value="medium">Média</option><option value="low">Baixa</option></select>
+                            </label>
+                            <p id="tec-filter-count" role="status" aria-live="polite">4 tecnologias</p>
+                        </div>
+                        <table class="tec-table" id="technology-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" aria-sort="none"><button type="button" data-tech-sort="name">Tecnologia</button></th>
+                                    <th scope="col" aria-sort="none"><button type="button" data-tech-sort="cost">Custo inicial</button></th>
+                                    <th scope="col" aria-sort="none"><button type="button" data-tech-sort="benefit">Benefício esperado</button></th>
+                                    <th scope="col" aria-sort="none"><button type="button" data-tech-sort="access">Acessibilidade</button></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-tech-category="low" data-tech-cost="low" data-tech-benefit="high" data-tech-access="high">
+                                    <td>App Meteorológico</td>
+                                    <td><span class="badge badge-baixo">Baixo</span></td>
+                                    <td><span class="badge badge-alto">Alto</span></td>
+                                    <td>Alta</td>
+                                </tr>
+                                <tr data-tech-category="medium" data-tech-cost="medium" data-tech-benefit="high" data-tech-access="medium">
+                                    <td>GPS p/ Maquinário</td>
+                                    <td><span class="badge badge-medio">Médio</span></td>
+                                    <td><span class="badge badge-alto">Alto</span> (Economiza insumos)</td>
+                                    <td>Média</td>
+                                </tr>
+                                <tr data-tech-category="medium" data-tech-cost="medium" data-tech-benefit="medium" data-tech-access="medium">
+                                    <td>Drone (Mapeamento)</td>
+                                    <td><span class="badge badge-medio">Médio/Alto</span></td>
+                                    <td><span class="badge badge-medio">Médio/Alto</span></td>
+                                    <td>Média</td>
+                                </tr>
+                                <tr data-tech-category="high" data-tech-cost="high" data-tech-benefit="high" data-tech-access="low">
+                                    <td>Agricultura de Precisão</td>
+                                    <td><span class="badge badge-alto">Alto</span></td>
+                                    <td><span class="badge badge-alto">Alto</span></td>
+                                    <td>Baixa (Pequenos Prod.)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA 6: SOJA, MEIO AMBIENTE E OS ODS -->
+        <section id="page-sustentabilidade" class="page hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2>5. Soja, Meio Ambiente e os ODS</h2>
+                    <p class="subtitle">Como equilibrar a alta produtividade de alimentos e bioenergia com a conservação dos ecossistemas e a Agenda 2030 da ONU?</p>
+                    <p class="nota">Pesquisa colaborativa liderada por: Kayke (Sustentabilidade, ESG, Bioeconomia e Nova Economia Verde) e Equipe UNESP/YEB</p>
+                </div>
+
+                <div class="sustainability-tabs" role="tablist" aria-label="Temas de sustentabilidade">
+                    <button class="sustainability-tab is-active" id="sus-tab-practices" type="button" role="tab" aria-selected="true" aria-controls="sus-panel-practices" tabindex="0">Práticas no campo</button>
+                    <button class="sustainability-tab" id="sus-tab-governance" type="button" role="tab" aria-selected="false" aria-controls="sus-panel-governance" tabindex="-1">Governança e rastreabilidade</button>
+                    <button class="sustainability-tab" id="sus-tab-ods" type="button" role="tab" aria-selected="false" aria-controls="sus-panel-ods" tabindex="-1">ODS</button>
+                    <button class="sustainability-tab" id="sus-tab-connections" type="button" role="tab" aria-selected="false" aria-controls="sus-panel-connections" tabindex="-1">Conexões e comparação</button>
+                </div>
+
+                <!-- Bloco 1: Práticas Agrícolas Sustentáveis no Brasil -->
+                <section class="card mb-4 sustainability-tab-panel" id="sus-panel-practices" role="tabpanel" aria-labelledby="sus-tab-practices" tabindex="0">
+                    <h3>🌱 Práticas Agrícolas Sustentáveis no Campo</h3>
+                    <p class="mt-2">O cultivo de soja no Brasil passou por uma revolução tecnológica nas últimas décadas, combinando ciência tropical com manejo regenerativo para mitigar impactos ambientais:</p>
+
+                    <div class="sus-grid mt-3">
+                        <div class="sus-card">
+                            <div class="sus-icon">🌾</div>
+                            <h4>Sistema Plantio Direto (SPD)</h4>
+                            <p>Em mais de 80% das lavouras de soja brasileiras, não há revolvimento mecânico do solo. A semeadura é feita sobre uma cobertura espessa de palhada residual. Essa técnica reduz a erosão hídrica em até 90%, retém umidade no solo e estoca até 1 tonelada de carbono orgânico por hectare ao ano.</p>
+                        </div>
+                        <div class="sus-card">
+                            <div class="sus-icon">🦠</div>
+                            <h4>Fixação Biológica de Nitrogênio (<abbr class="glossary-tooltip" tabindex="0" title="Associação entre plantas e microrganismos que disponibiliza nitrogênio à cultura.">FBN</abbr>)</h4>
+                            <p>Graças a pesquisas brasileiras (lideradas pela Embrapa), a soja nacional utiliza inoculantes com bactérias <em>Bradyrhizobium</em> que capturam o nitrogênio do ar. Isso elimina a necessidade de fertilizantes nitrogenados químicos sintéticos, gerando economia anual de bilhões de dólares e evitando a emissão massiva de óxido nitroso (potente gás de efeito estufa).</p>
+                        </div>
+                        <div class="sus-card">
+                            <div class="sus-icon">🐞</div>
+                            <h4>Manejo Integrado e Bioinsumos</h4>
+                            <p>O Brasil é líder mundial na adoção de bioinsumos: uso de parasitoides, fungos e bactérias benéficas para o controle biológico de pragas (lagartas e percevejos) e doenças radiculares, reduzindo significativamente a dependência de defensivos químicos tradicionais.</p>
+                        </div>
+                        <div class="sus-card">
+                            <div class="sus-icon">🌳</div>
+                            <h4>Integração Lavoura-Pecuária-Floresta (ILPF)</h4>
+                            <p>A rotação e consórcio de soja com milho safrinha, pastagens melhoradas e faixas de árvores permite recuperar áreas degradadas de pecuária, gerando o "efeito poupa-terra": produzir o dobro de grãos e carnes sem derrubar nenhuma árvore nativa adicional.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bloco 2: Governança, Rastreabilidade e Nova Economia Verde -->
+                <section class="card mb-4 sustainability-tab-panel" id="sus-panel-governance" role="tabpanel" aria-labelledby="sus-tab-governance" tabindex="0" hidden>
+                    <h3>🛡️ Governança Socioambiental, Rastreabilidade e ESG</h3>
+                    <div class="gov-grid mt-3">
+                        <div class="gov-card">
+                            <span class="icon">📜</span>
+                            <h4>Moratória da Soja & Código Florestal</h4>
+                            <p>Vigente desde 2006, o pacto proíbe a comercialização de soja cultivada em áreas desmatadas do bioma Amazônia. Paralelamente, o Código Florestal Brasileiro exige a preservação obrigatória de 20% a 80% de vegetação nativa em cada propriedade (Reserva Legal e APPs) registradas no CAR (Cadastro Ambiental Rural).</p>
+                        </div>
+                        <div class="gov-card">
+                            <span class="icon">🛰️</span>
+                            <h4>Rastreabilidade e Regulação <abbr class="glossary-tooltip" tabindex="0" title="Regulamento da União Europeia sobre produtos associados ao desmatamento e à degradação florestal; consulte o texto e os prazos vigentes.">EUDR</abbr></h4>
+                            <p>Exigências de mercados internacionais (especialmente a União Europeia com a regulação EUDR) e a certificação RTRS (Round Table on Responsible Soy) impulsionam o rastreamento geoespacial via satélite, garantindo que o grão exportado provenha de áreas 100% livres de desmatamento ilegal e exploração trabalhista.</p>
+                        </div>
+                        <div class="gov-card">
+                            <span class="icon">⚡</span>
+                            <h4>Biodiesel e Créditos de Carbono (RenovaBio)</h4>
+                            <p>Cerca de 70% do biodiesel produzido no Brasil provém do óleo de soja. Essa mistura mandatória ao diesel fóssil (B14/B15) descarboniza a frota pesada, reduzindo emissões de CO₂ e gerando Créditos de Descarbonização (<abbr class="glossary-tooltip" tabindex="0" title="Crédito do RenovaBio ligado ao desempenho energético-ambiental de produtores de biocombustíveis.">CBIOs</abbr>) no mercado de finanças verdes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bloco 3: Soja e os Objetivos de Desenvolvimento Sustentável (ODS) -->
+                <section class="card sustainability-tab-panel" id="sus-panel-ods" role="tabpanel" aria-labelledby="sus-tab-ods" tabindex="0" hidden>
+                    <div class="ods-title-wrapper">
+                        <h3>🌍 A Soja e a Agenda 2030: Conexão com os ODS da ONU</h3>
+                        <p class="mt-2">A produção e a cadeia do complexo soja interagem diretamente com as metas globais de desenvolvimento sustentável estabelecidas pelas Nações Unidas:</p>
+                    </div>
+
+                    <div class="ods-grid mt-3">
+                        <!-- ODS 2 -->
+                        <div class="ods-card" style="border-top-color: #DDA63A;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #DDA63A;">ODS 2</span>
+                                <h4>Fome Zero e Agricultura Sustentável</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> O farelo de soja é a principal fonte proteica para nutrição de aves, suínos e bovinos globalmente. O aumento contínuo da produtividade por hectare contribui para baratear alimentos e suprir a crescente demanda calórica e proteica mundial com menor uso de terra.</p>
+                        </div>
+
+                        <!-- ODS 8 -->
+                        <div class="ods-card" style="border-top-color: #A21942;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #A21942;">ODS 8</span>
+                                <h4>Trabalho Decente e Crescimento</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> Principal gerador de superávit na balança comercial do Brasil. Impulsiona municípios do interior com elevado IDH (ex: Sorriso, Lucas do Rio Verde) e emprega mais de 2 milhões de pessoas em transporte, cooperativas, indústrias e serviços tecnológicos especializados.</p>
+                        </div>
+
+                        <!-- ODS 9 -->
+                        <div class="ods-card" style="border-top-color: #FD6925;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #FD6925;">ODS 9</span>
+                                <h4>Indústria, Inovação e Infraestrutura</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> Estimula a modernização logística nacional (ferrovias como Norte-Sul e Ferronorte, portos do Arco Norte) e a indústria biotecnológica (biofábricas, agtechs de monitoramento e complexo de esmagamento industrial de valor agregado).</p>
+                        </div>
+
+                        <!-- ODS 12 -->
+                        <div class="ods-card" style="border-top-color: #BF8B2E;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #BF8B2E;">ODS 12</span>
+                                <h4>Consumo e Produção Responsáveis</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> Aproveitamento de 100% do grão processado (sem desperdício: farelo para ração, óleo para culinária e biodiesel, lecitina para alimentos e fármacos) e rastreabilidade certificada (selos socioambientais RTRS, ProTerra).</p>
+                        </div>
+
+                        <!-- ODS 13 -->
+                        <div class="ods-card" style="border-top-color: #3F7E44;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #3F7E44;">ODS 13</span>
+                                <h4>Ação Contra a Mudança Global do Clima</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> Mitigação ativa através da estocagem de carbono no solo pelo Sistema Plantio Direto e substituição direta de combustível fóssil pelo biodiesel em ônibus e caminhões, gerando ativos negociáveis de descarbonização.</p>
+                        </div>
+
+                        <!-- ODS 15 -->
+                        <div class="ods-card" style="border-top-color: #56C02B;">
+                            <div class="ods-header">
+                                <span class="ods-number" style="background-color: #56C02B;">ODS 15</span>
+                                <h4>Vida Terrestre e Preservação de Biomas</h4>
+                            </div>
+                            <p><strong>Papel da Soja:</strong> Proteção das florestas nativas e nascentes através do cumprimento do Código Florestal, recuperação de terras degradadas e redução da pressão por novas fronteiras agrícolas via safrinha consorciada.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card sustainability-tab-panel sustainability-connections-panel" id="sus-panel-connections" role="tabpanel" aria-labelledby="sus-tab-connections" tabindex="0" hidden>
+                    <h3>Como as práticas se conectam aos ODS?</h3>
+                    <p class="mt-2">Selecione uma prática para destacar os objetivos relacionados, ou selecione um ODS para ver as práticas que podem contribuir para ele.</p>
+                    <div class="practice-ods-map">
+                        <div class="practice-selector" role="group" aria-label="Práticas agrícolas">
+                            <button class="practice-ods-button is-selected" type="button" data-sustainability-practice="spd" aria-pressed="true">
+                                <span aria-hidden="true">🌾</span><span><strong>Plantio direto</strong><small>Palhada e menor revolvimento do solo.</small></span>
+                            </button>
+                            <button class="practice-ods-button" type="button" data-sustainability-practice="fbn" aria-pressed="false">
+                                <span aria-hidden="true">🦠</span><span><strong>Fixação biológica de nitrogênio</strong><small>Uso de inoculantes com bactérias benéficas.</small></span>
+                            </button>
+                            <button class="practice-ods-button" type="button" data-sustainability-practice="bioinsumos" aria-pressed="false">
+                                <span aria-hidden="true">🐞</span><span><strong>Manejo integrado e bioinsumos</strong><small>Monitoramento e controle biológico dentro do manejo.</small></span>
+                            </button>
+                            <button class="practice-ods-button" type="button" data-sustainability-practice="ilpf" aria-pressed="false">
+                                <span aria-hidden="true">🌳</span><span><strong>Integração lavoura-pecuária-floresta</strong><small>Combinação e rotação de atividades na propriedade.</small></span>
+                            </button>
+                        </div>
+                        <div class="ods-selector" role="group" aria-label="Objetivos de Desenvolvimento Sustentável">
+                            <button class="ods-connection" type="button" data-sustainability-ods="2" aria-pressed="false"><span class="ods-number">ODS 2</span><span>Fome Zero e Agricultura Sustentável</span></button>
+                            <button class="ods-connection" type="button" data-sustainability-ods="12" aria-pressed="false"><span class="ods-number">ODS 12</span><span>Consumo e Produção Responsáveis</span></button>
+                            <button class="ods-connection" type="button" data-sustainability-ods="13" aria-pressed="false"><span class="ods-number">ODS 13</span><span>Ação Contra a Mudança do Clima</span></button>
+                            <button class="ods-connection" type="button" data-sustainability-ods="15" aria-pressed="false"><span class="ods-number">ODS 15</span><span>Vida Terrestre</span></button>
+                        </div>
+                    </div>
+                    <p class="practice-ods-status" id="practice-ods-status" role="status" aria-live="polite">Plantio direto: contribuições possíveis aos ODS 2, 12, 13 e 15. As conexões dependem de como a prática é aplicada.</p>
+
+                    <div class="sustainability-comparator">
+                        <div class="sustainability-comparator-heading">
+                            <h3>Comparador: referência e práticas regenerativas</h3>
+                            <p>Explore qualitativamente como a adoção de práticas pode mudar o manejo. Os exemplos não representam todos os sistemas convencionais nem garantem um resultado.</p>
+                        </div>
+                        <label class="comparison-range-label" for="sustainability-comparison-slider">
+                            <span>Conjunto de práticas regenerativas no cenário</span>
+                            <output id="sustainability-comparison-value" for="sustainability-comparison-slider">0% selecionado</output>
+                        </label>
+                        <input id="sustainability-comparison-slider" type="range" min="0" max="100" step="25" value="0" aria-describedby="sustainability-comparison-note">
+                        <div class="comparison-range-scale" aria-hidden="true"><span>Referência</span><span>Conjunto de práticas</span></div>
+                        <div class="comparison-transition-track" aria-hidden="true"><span id="sustainability-comparison-fill"></span></div>
+                        <p class="nota" id="sustainability-comparison-note">O valor do controle é apenas um índice didático do cenário escolhido, não uma porcentagem real de área ou de adoção no Brasil.</p>
+                        <p class="comparison-scenario-status" id="sustainability-comparison-status" role="status" aria-live="polite">Referência didática: sem o conjunto de práticas selecionado neste comparador.</p>
+                        <div class="comparison-practice-columns">
+                            <article class="comparison-practice-state is-active" data-comparison-state="reference">
+                                <h4>Referência do comparador</h4>
+                                <ul>
+                                    <li>Manejo e cobertura do solo variam conforme a propriedade.</li>
+                                    <li>Monitoramento e conservação podem ocorrer em qualquer sistema produtivo.</li>
+                                    <li>Esta coluna não descreve todos os produtores convencionais.</li>
+                                </ul>
+                            </article>
+                            <article class="comparison-practice-state" data-comparison-state="regenerative">
+                                <h4>Conjunto regenerativo apresentado</h4>
+                                <ul>
+                                    <li>Plantio direto com palhada, quando adequado às condições locais.</li>
+                                    <li>FBN, manejo integrado e bioinsumos conforme orientação técnica.</li>
+                                    <li>Integração lavoura-pecuária-floresta quando viável na propriedade.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="card mt-4 callout-quiz" style="text-align: center; background: linear-gradient(135deg, var(--light-green), var(--light-brown));">
+                    <h3>💡 Quer testar o que aprendeu sobre a Soja e a Sustentabilidade?</h3>
+                    <p class="mt-2">Criamos um quiz interativo com 6 perguntas para fixar os conceitos econômicos, ambientais e tecnológicos da nossa plataforma.</p>
+                    <button class="btn-primary mt-3" onclick="navigate('quiz')">Fazer o Quiz Agora 🚀</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PÁGINA 7: QUIZ EDUCATIVO DE FIXAÇÃO -->
+        <section id="page-quiz" class="page hidden">
+            <div class="container">
+                <header class="quiz-header-card">
+                    <p class="cycle-eyebrow">Fixação e aprendizado</p>
+                    <h2>Quiz: o que você aprendeu sobre a soja?</h2>
+                    <p class="subtitle">Escolha uma rodada para revisar mercado, produção, tecnologia e sustentabilidade.</p>
+                </header>
+
+                <section class="quiz-setup card mt-3" id="quiz-setup" aria-labelledby="quiz-setup-title">
+                    <h3 id="quiz-setup-title">Configurar rodada</h3>
+                    <div class="quiz-setup-controls">
+                        <label for="quiz-difficulty">Dificuldade
+                            <select id="quiz-difficulty">
+                                <option value="mista">Mista</option>
+                                <option value="facil">Básica</option>
+                                <option value="intermediaria">Intermediária</option>
+                                <option value="avancada">Avançada</option>
+                            </select>
+                        </label>
+                        <label for="quiz-round-size">Perguntas por rodada
+                            <select id="quiz-round-size"><option value="8">8 perguntas</option><option value="9">9 perguntas</option><option value="10">10 perguntas</option></select>
+                        </label>
+                        <label class="quiz-timer-toggle" for="quiz-timer-toggle">
+                            <input id="quiz-timer-toggle" type="checkbox">
+                            <span>Ativar cronômetro de 30 segundos por pergunta</span>
+                        </label>
+                    </div>
+                    <button class="btn-primary mt-3" id="quiz-start-btn" type="button">Começar rodada</button>
+                    <div class="quiz-history" aria-live="polite">
+                        <p id="quiz-progress-summary">Seu progresso aparecerá aqui.</p>
+                        <div class="quiz-earned-badges" id="quiz-earned-badges" aria-label="Badges conquistados"></div>
+                    </div>
+                </section>
+
+                <div class="quiz-container card mt-3 hidden" id="quiz-box" aria-labelledby="quiz-question">
+                    <div class="quiz-progress-bar-wrap">
+                        <div class="quiz-progress-info">
+                            <span id="quiz-question-counter">Pergunta 1 de 8</span>
+                            <span id="quiz-score-live">Pontuação: 0</span>
+                        </div>
+                        <div class="quiz-progress-track" role="progressbar" aria-label="Progresso da rodada" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="quiz-progress-fill" id="quiz-progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question-area mt-3">
+                        <div class="quiz-question-tags">
+                            <span class="quiz-category-tag" id="quiz-category">Categoria</span>
+                            <span class="quiz-difficulty-tag" id="quiz-difficulty-tag">Dificuldade</span>
+                        </div>
+                        <p class="quiz-timer hidden" id="quiz-timer-display" role="status" aria-live="polite"></p>
+                        <h3 class="quiz-question-text mt-2" id="quiz-question">Carregando pergunta...</h3>
+                    </div>
+
+                    <div class="quiz-options-list mt-3" id="quiz-options"></div>
+
+                    <div class="quiz-feedback-box hidden mt-3" id="quiz-feedback">
+                        <div class="feedback-title" id="feedback-title"></div>
+                        <p class="feedback-text mt-1" id="feedback-text"></p>
+                        <div class="quiz-feedback-actions mt-3">
+                            <button class="btn-outline" id="quiz-review-btn" type="button">Revisar este tema</button>
+                            <button class="btn-primary" id="quiz-next-btn" type="button">Próxima pergunta</button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="quiz-result-card card text-center mt-3 hidden" id="quiz-result" aria-labelledby="result-title">
+                    <div class="result-icon" id="result-icon" aria-hidden="true">🏆</div>
+                    <p class="quiz-badge-earned" id="quiz-badge-earned"></p>
+                    <h2 id="result-title" class="mt-2">Rodada concluída</h2>
+                    <p class="result-score-text mt-2" id="result-score"></p>
+                    <div class="result-bar-wrap mt-3" role="progressbar" aria-label="Percentual de acertos" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="result-bar-fill" id="result-bar-fill"></div>
+                    </div>
+                    <p class="result-msg mt-3" id="result-msg"></p>
+                    <div class="result-actions mt-4">
+                        <button class="btn-primary" id="quiz-restart-btn" type="button">🔄 Nova rodada</button>
+                        <button class="btn-secondary" type="button" data-page-link="sustentabilidade">🌿 Rever Meio Ambiente & ODS</button>
+                        <button class="btn-outline" type="button" data-page-link="home">🏠 Voltar ao início</button>
+                    </div>
+                </section>
+
+                <section class="glossary-section card mt-4" aria-labelledby="glossary-title">
+                    <div class="glossary-heading">
+                        <div>
+                            <p class="cycle-eyebrow">Consulta rápida</p>
+                            <h3 id="glossary-title">Glossário da soja</h3>
+                            <p>Busque um termo para ver seu significado.</p>
+                        </div>
+                    </div>
+                    <label class="glossary-search-label" for="glossary-search">Pesquisar termo
+                        <input id="glossary-search" type="search" placeholder="Ex.: CBOT, FBN, NDVI">
+                    </label>
+                    <p class="glossary-count" id="glossary-count" role="status" aria-live="polite"></p>
+                    <dl class="glossary-results" id="glossary-results"></dl>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- PÁGINA 8: REFERÊNCIAS E FONTES -->
+        <section id="page-referencias" class="page hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2>7. Referências e Fontes</h2>
+                    <p class="subtitle">Fontes oficiais, institucionais e acadêmicas para consulta, revisão e citação do conteúdo da plataforma.</p>
+                </div>
+
+                <div class="references-toolbar card mt-3">
+                    <label for="refs-search">Buscar fonte
+                        <input id="refs-search" type="search" placeholder="Ex.: Embrapa, USDA, EUDR, ODS">
+                    </label>
+                    <div class="ref-category-filters" role="group" aria-label="Filtros de categoria de fontes">
+                        <button class="ref-filter is-active" type="button" data-ref-filter="all">Todas</button>
+                        <button class="ref-filter" type="button" data-ref-filter="oficial">Oficial</button>
+                        <button class="ref-filter" type="button" data-ref-filter="mercado">Mercado</button>
+                        <button class="ref-filter" type="button" data-ref-filter="academico">Acadêmico</button>
+                        <button class="ref-filter" type="button" data-ref-filter="sustentabilidade">Sustentabilidade</button>
+                    </div>
+                </div>
+
+                <div class="references-list mt-3" id="references-list" aria-live="polite"></div>
+
+                <div class="card mt-4 citation-box" id="citation-box">
+                    <h3>Como citar este material</h3>
+                    <p>Se for usar este conteúdo em apresentações, relatórios ou materiais educacionais, a citação sugerida é:</p>
+                    <blockquote>
+                        ECOSOJA BRASIL. <em>Projeto de Extensão Universitária sobre a Soja</em>. UNESP & YEB, 2026. Disponível em: <span id="citation-url">https://example.edu/ecosoja-brasil</span>.
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/map-data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
